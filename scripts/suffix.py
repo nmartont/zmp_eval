@@ -56,21 +56,23 @@ def suffixWithUnit(number):
         return "ERROR"
 
     # Choose the most fitting suffix for the given number, based on the log10 of the number
+    # Note: this will work even if the suffixes are extended, eg. hecto, deca, deci, etc..
     suffix_exponent, suffix_name = next(((exp, name) for exp, name in suffixes
                                          if exp <= log_10),
                                         suffixes[-1])  # Default is the lowest possible suffix in the list
 
-    # Divide the number with 10^suffix_exponent
+    # Divide the number with 10^suffix_exponent to get the number to display in the return string
     display_number = number/10**suffix_exponent
 
-    # Display text
+    # Display text is the display number, and the suffix name.
+    # If display number%1==0, no decimals are shown. Otherwise all useful decimals are visible
     display_text = "{:.16g} {}".format(display_number, suffix_name).strip()  # Python float is accurate to 16 digits
 
     return display_text
 
 
 if __name__ == "__main__":
-    # Parse command line argument for the number
+    # Parse the command line argument for the number
     parser = argparse.ArgumentParser()
     parser.add_argument("number", type=float,
                         help="The number of which to return the string representation, using suffixes.")
