@@ -36,11 +36,11 @@ def convert_JSON_A_to_JSON_B(json_a):
     """
     json_b = dict()
 
-    # Iterate over key/value pairs in json_a. FIXME this syntax only works on Python3
+    # Iterate over key/value pairs in json_a
     for key, value in json_a.items():
         try:
             # split key by separator
-            category, number, attribute = tuple(key.split(sep=SEPARATOR))
+            category, number, attribute = tuple(key.split(SEPARATOR))
         except ValueError:
             return "Format error"
 

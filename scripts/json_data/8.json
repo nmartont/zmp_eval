@@ -1,0 +1,19 @@
+{
+  "locker_5_light": 1,
+  "locker_5_unlock": 2,
+  "locker_6_light": 1,
+  "locker_6_unlock": 1,
+  "locker_1_door": 1,
+  "locker_1_item": 1,
+  "locker_2_door": 1,
+  "locker_2_item": 2,
+  "locker_5_door": 1,
+  "locker_3_light": 1,
+  "locker_3_unlock": 1,
+  "locker_4_light": 1,
+  "locker_4_unlock": 1,
+  "locker_3_door": 1,
+  "locker_3_item": 3,
+  "locker_4_door": 1,
+  "locker_4_item": 0
+}
