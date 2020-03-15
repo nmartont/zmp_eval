@@ -100,8 +100,22 @@ do
 done
 ```
 
-This script will only process files with `*json` extension.
+This script will only process files with `*.json` extension.
 The original files will be overwritten.
 
 How to make it faster: parallel execution of the `for loop` inside the bash script is possible.
 That way, the conversion tasks don't need to wait for each other, and the runtime can be greatly reduced.
+
+Parallelly executing script:
+```bash
+#!/usr/bin/env bash
+for entry in "json_data"/*.json
+do
+  [[ -f "$entry" ]] || break
+  python json_manip.py "$entry" &
+done
+```
+
+## Ground Plane Detection
+
+% TODO
