@@ -118,4 +118,15 @@ done
 
 ## Ground Plane Detection
 
-% TODO
+#### Usage
+
+First, the source code need to be made.
+Please use the included `CMakeLists.txt` file with a compiler that can handle C++14.
+Also, the point cloud library is used in the software, so please have `pcl` installed.
+
+In the `ground_plane/ground_plane.h` header, it is possible to define `VISUALIZATION` to display the point clouds during runtime, and `PRINT_DEBUG` to display some debug information.
+
+#### Description
+
+To carry out the ground plane task, I created a program that uses PCL to handle the point cloud data.
+The algorithm inside the program is still subject to change, as I need additional clarification about the task.
